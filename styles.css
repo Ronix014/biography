@@ -1,0 +1,73 @@
+/* External CSS */
+
+/* Global Styles */
+body {
+    font-family: 'verdana', sans-serif; /*default font */
+    background-color: #F5F5F5;
+    margin: 20px;
+    padding: 20px;
+}
+
+
+/* Header Styles */
+h1, h2 {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    color: rgb(1, 182, 182);
+}
+
+/* Container */
+.container {
+    width: 80%;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Paragraph Styles */
+p {
+    text-align: justify;
+    line-height: 1.6;
+}
+
+/* Horizontal Rules */
+hr {
+    height: 6px;
+    background: #C5BAFF;
+    border: none;
+}
+
+/* Styling Logical Elements */
+strong {
+    color: #D32F2F; /* Red color for strong emphasis */
+}
+
+em {
+    font-style: italic;
+}
+
+mark {
+    background-color: yellow;
+}
+
+/* Styling for Superscript Numbers */
+sup {
+    font-size: 1rem;
+    color: #000000; /* A soft blue color */
+}
+
+/* Blockquote Styling */
+blockquote {
+    font-size: 1.1rem;
+    margin-left: 20px;
+    padding-left: 15px;
+    border-left: 5px solid #ccc;
+    color: #555;
+}
+
+/* Paragraph Spacing for Blockquotes */
+blockquote p {
+    margin: 10px 0;
+}
