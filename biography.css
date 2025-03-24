@@ -162,9 +162,9 @@ footer {
     }
 }
 .image-grid img {
-    width: 24%; 
-  height: 400px;
+    width: 23%; 
+  height: 350px;
   border-radius: 8px;
-  object-fit: cover;
+  object-fit: center;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
