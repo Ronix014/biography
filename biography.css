@@ -119,15 +119,12 @@ div[align="center"] button {
 /* Back to Top Link Styling */
 .back-to-top {
     display: inline-block;
-    text-align: center;
-    background-color: #4b0082;
-    color: white;
-    font-weight: bold;
-    font-size: 16px;
-    padding: 8px 12px;
-    border-radius: 5px;
+    float: right;
+    margin-top: 10px;
     text-decoration: none;
-    transition: all 0.3s ease-in-out;
+    color: #4b0082;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
 }
 
 .back-to-top:hover {
