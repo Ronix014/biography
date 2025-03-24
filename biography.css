@@ -1,182 +1,36 @@
-/* General Styling */
-body {
-    font-family: 'Georgia', serif;
-    background-color: #f5f1fa; /* Light purple background */
-    color: #333;
-    margin: 0;
-    padding: 0;
+/* Gallery Styling */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns for consistency */
+    gap: 15px;
+    padding: 20px 0;
 }
 
-/* Container */
-.container {
-    width: 80%;
-    margin: auto;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-/* Header */
-h1 {
-    font-size: 2.5em;
-    color: #4b0082;
-    text-transform: uppercase;
-    text-align: center;
-}
-
-h2 {
-    color: #6a0dad;
-    font-family: 'Georgia', serif;
-}
-
-/* Navigation Bar */
-.nav {
-    text-align: center;
-    background: #4b0082;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 2px 2px 10px #1e3a5f;
-}
-
-.nav a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    padding: 10px 15px;
-    display: inline-block;
-    transition: all 0.3s ease-in-out;
-}
-
-.nav a:hover {
-    background: #6a0dad;
-    border-radius: 5px;
-    transform: scale(1.1);
-}
-
-/* Section Styling */
-.section {
-    padding: 15px;
-    background: #fff;
-    border: 2px solid #4b0082;
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    aspect-ratio: 1/1; /* maintain square */
+    border: 3px solid #4b0082;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Paragraph Styling */
-p {
-    text-align: justify;
-    line-height: 1.8;
-    font-size: 16px;
-}
-
-/* Horizontal Rule */
-hr {
-    border: none;
-    height: 6px;
-    background-color: purple;
-    margin: 10px auto;
-}
-
-/* Blockquote Styling */
-blockquote {
-    font-size: 1.1rem;
-    margin-left: 20px;
-    padding-left: 15px;
-    border-left: 5px solid #6a0dad;
-    color: #555;
-    font-style: italic;
-}
-
-/* General Button Styling */
-button {
-    background-color: #4b0082; /* Match the navigation bar color */
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-}
-
-button:hover {
-    background-color: #6a0dad;
-    transform: scale(1.1);
-    box-shadow: 0 0 10px rgba(106, 13, 173, 0.7);
-}
-
-/* Align buttons in the center */
-div[align="center"] button {
-    margin: 5px; /* Add spacing between buttons */
-}
-
-/* Back to Top Link Styling */
-.back-to-top {
-    display: inline-block;
-    text-align: center;
-    background-color: #4b0082;
-    color: white;
-    font-weight: bold;
-    font-size: 16px;
-    padding: 8px 12px;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: all 0.3s ease-in-out;
-}
-
-.back-to-top:hover {
-    background-color: #6a0dad;
-    transform: scale(1.1);
-    box-shadow: 0 0 10px rgba(106, 13, 173, 0.7);
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #333;
-    color: white;
-    font-size: 0.9rem;
-    border-radius: 8px;
-    margin-top: 30px;
-}
-
-/* Media Query for Smaller Screens */
-@media (max-width: 768px) {
-    .container {
-        width: 95%;
-        padding: 10px;
-    }
-
-    .nav a {
-        display: block;
-        padding: 10px;
-    }
-}
-.image-grid {
-       display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    margin: 20px 0;
-}
-
-.image-grid img {
-      width: 23%; 
-    height: auto;
-    border-radius: 8px;
+.gallery img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: block;
+    transition: transform 0.3s ease;
 }
-/* 📱 Responsive Design - For Small Screens */
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Responsive gallery for mobile */
 @media (max-width: 768px) {
-    /* Make header elements stack */
-    header {
-        flex-direction: column;
-        text-align: center;
+    .gallery {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on small screens */
     }
+}
