@@ -119,7 +119,7 @@ div[align="center"] button {
 /* Back to Top Link Styling */
 .back-to-top {
     display: inline-block;
-    text-align: center;
+    text-align: right;
     background-color: #4b0082;
     color: white;
     font-weight: bold;
