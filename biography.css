@@ -58,6 +58,15 @@ h2 {
     transform: scale(1.1);
 }
 
+.nav a.active {
+    color: #1de9df;                /* White text */
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.3s;
+}
+
 /* Section Styling */
 .section {
     padding: 15px;
